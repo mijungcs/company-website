@@ -4,63 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundBridge - Studio Management for Online Music Educators</title>
-    <!-- Links your stylesheet -->
+    <!-- CSS 스타일시트 연결 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- 상단 네비게이션 바 -->
     <header class="navbar">
-        <div class="nav-brand">Sound<span>Bridge</span></div>
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#about">About</a>
+        <a href="#home" class="nav-brand">Sound<span>Bridge</span></a>
+        <nav class="nav-links" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- 메인 히어로 섹션 -->
         <section class="hero" id="home">
             <div class="container">
                 <h1>Streamline Remote Music Education with <span>SoundBridge</span></h1>
                 <p>The specialized, cloud-based studio management platform engineered specifically for online music educators. Centralize homework assignments, asynchronous video feedback, scheduling, and billing into a single intuitive interface.</p>
-                <div class="hero-buttons">
+                <nav class="hero-buttons" aria-label="Hero Actions">
                     <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
                     <a href="#features" class="btn btn-secondary">Explore Features</a>
-                </div>
+                </nav>
             </div>
         </section>
 
-        <!-- Features Section -->
+        <!-- 핵심 기능 섹션 (ul / li / article 시맨틱 태그 사용) -->
         <section class="features" id="features">
             <div class="container">
                 <h2 class="section-title">Built Specifically for Music Pedagogy</h2>
                 <p class="section-subtitle">Eliminate the fragmentation of generic video conferencing and messaging apps with tools designed for musicians.</p>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Interactive Homework Portal</h3>
-                        <p>Upload customized homework assignments, sheet music notation snippets, and metronome targets seamlessly for every student.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Bidirectional Video Repository</h3>
-                        <p>Students upload practice videos for review; teachers return side-by-side, timestamped video commentary specifically designed for musical critique.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Integrated Scheduling & Billing</h3>
-                        <p>Automate calendar syncing, lesson package invoicing, and secure payment processing to save administrative time.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Data Security & Compliance</h3>
-                        <p>Strict adherence to U.S. digital privacy standards, maintaining full compliance with COPPA and FERPA guidelines safeguarding minor student records.</p>
-                    </div>
-                </div>
+                
+                <ul class="features-grid">
+                    <li class="feature-card">
+                        <article>
+                            <h3>Interactive Homework Portal</h3>
+                            <p>Upload customized homework assignments, sheet music notation snippets, and metronome targets seamlessly for every student.</p>
+                        </article>
+                    </li>
+                    <li class="feature-card">
+                        <article>
+                            <h3>Bidirectional Video Repository</h3>
+                            <p>Students upload practice videos for review; teachers return side-by-side, timestamped video commentary specifically designed for musical critique.</p>
+                        </article>
+                    </li>
+                    <li class="feature-card">
+                        <article>
+                            <h3>Integrated Scheduling & Billing</h3>
+                            <p>Automate calendar syncing, lesson package invoicing, and secure payment processing to save administrative time.</p>
+                        </article>
+                    </li>
+                    <li class="feature-card">
+                        <article>
+                            <h3>Data Security & Compliance</h3>
+                            <p>Strict adherence to U.S. digital privacy standards, maintaining full compliance with COPPA and FERPA guidelines safeguarding minor student records.</p>
+                        </article>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <!-- Pricing Section -->
+        <!-- 요금제 섹션 (article 시맨틱 태그 사용) -->
         <section class="pricing" id="pricing">
             <div class="container">
                 <h2 class="section-title">Transparent, Tiered Pricing</h2>
@@ -68,10 +80,10 @@
                 
                 <div class="pricing-grid">
                     <!-- Solo Tier -->
-                    <div class="pricing-card">
+                    <article class="pricing-card">
                         <h3>Individual Solo Tier</h3>
                         <p>For independent educators managing a compact student roster.</p>
-                        <div class="price">$19.99 <span>/ month</span></div>
+                        <p class="price">$19.99 <span>/ month</span></p>
                         <ul class="pricing-features">
                             <li>Up to 15 active students</li>
                             <li>Interactive Homework Portal</li>
@@ -79,14 +91,14 @@
                             <li>Calendar Sync & Invoicing</li>
                         </ul>
                         <a href="#" class="btn btn-primary">Get Started</a>
-                    </div>
+                    </article>
 
                     <!-- Pro Tier (Featured) -->
-                    <div class="pricing-card featured">
+                    <article class="pricing-card featured">
                         <span class="badge">Most Popular</span>
                         <h3>Individual Pro Tier</h3>
                         <p>For established solo teachers with robust weekly rosters.</p>
-                        <div class="price">$39.99 <span>/ month</span></div>
+                        <p class="price">$39.99 <span>/ month</span></p>
                         <ul class="pricing-features">
                             <li>16 to 30+ active students</li>
                             <li>Advanced practice analytics</li>
@@ -94,14 +106,14 @@
                             <li>All Solo Tier features included</li>
                         </ul>
                         <a href="#" class="btn btn-primary">Get Started</a>
-                    </div>
+                    </article>
 
                     <!-- Commercial Academy Tier -->
-                    <div class="pricing-card">
+                    <article class="pricing-card">
                         <span class="badge">Institutions</span>
                         <h3>Commercial Academy</h3>
                         <p>For multi-teacher institutions requiring admin oversight.</p>
-                        <div class="price">$149.00 <span>/ month</span></div>
+                        <p class="price">$149.00 <span>/ month</span></p>
                         <ul class="pricing-features">
                             <li>Includes up to 5 instructor seats</li>
                             <li>$15.00/mo per extra instructor seat</li>
@@ -109,60 +121,57 @@
                             <li>Multi-seat licensing & oversight</li>
                         </ul>
                         <a href="#" class="btn btn-primary">Contact Sales</a>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- 회사 소개 섹션 (aside / header 시맨틱 구조 적용) -->
         <section class="about" id="about">
             <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
+                <article class="about-content">
+                    <header class="about-text">
                         <h2>About SoundBridge</h2>
                         <p><strong>Mission Statement:</strong> To empower professional music educators with intuitive, high-performance digital tools that streamline studio operations, enhance student practice engagement, and elevate the standard of online music education worldwide.</p>
                         <p>Founded by <strong>Helen Lee</strong> (Owner, CEO, and Product Architect), SoundBridge bridges the critical gap between live instruction and asynchronous practice reinforcement. Operating as a Domestic LLC in the United States, our vision extends from individual studio optimization to a future global student-matching marketplace.</p>
-                        
-                        <div class="about-highlights">
-                            <div class="highlight-box">
-                                <h4>Initial Market</h4>
-                                <p>U.S. independent teachers & commercial academies (Ages 16–60).</p>
-                            </div>
-                            <div class="highlight-box">
-                                <h4>Strategic Growth</h4>
-                                <p>Phase 1 SaaS studio management scaling into Phase 2 global student marketplace.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image-placeholder" style="background: var(--bg-light); border: 2px dashed var(--border-color); border-radius: var(--radius); padding: 3rem; text-align: center;">
-                        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">SoundBridge Ecosystem</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Empowering online pedagogy with synchronized video critiques, structured assignments, and automated billing workflows.</p>
-                    </div>
-                </div>
+                    </header>
+                    
+                    <aside class="about-highlights">
+                        <section class="highlight-box">
+                            <h4>Initial Market</h4>
+                            <p>U.S. independent teachers & commercial academies (Ages 16–60).</p>
+                        </section>
+                        <section class="highlight-box">
+                            <h4>Strategic Growth</h4>
+                            <p>Phase 1 SaaS studio management scaling into Phase 2 global student marketplace.</p>
+                        </section>
+                    </aside>
+                </article>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- 푸터 섹션 -->
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
+                <section class="footer-col">
                     <h3>SoundBridge</h3>
                     <p>Streamlining remote music instruction through purpose-built digital tools, asynchronous video feedback, and intuitive studio management.</p>
-                </div>
-                <div class="footer-col">
+                </section>
+                <nav class="footer-col" aria-label="Footer Navigation">
                     <h3>Quick Links</h3>
                     <ul>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#about">About Us</a></li>
                     </ul>
-                </div>
-                <div class="footer-col">
+                </nav>
+                <section class="footer-col">
                     <h3>Compliance & Legal</h3>
                     <p>Compliant with U.S. COPPA and FERPA digital privacy standards protecting minor student educational records.</p>
-                </div>
+                </section>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 SoundBridge LLC. Founded by Helen Lee. All rights reserved.</p>
@@ -170,7 +179,7 @@
         </div>
     </footer>
 
-    <!-- Links your JavaScript interactivity -->
+    <!-- 자바스크립트 연결 -->
     <script src="script.js"></script>
 </body>
 </html>
