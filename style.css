@@ -6,8 +6,8 @@
 :root {
   --primary-color: #1e293b; /* Deep Slate Navy */
   --primary-dark: #0f172a;
-  --accent-color: #059669;  /* Emerald Green Accent */
-  --accent-hover: #047857;  /* Darker Emerald Green Hover */
+  --accent-color: #059669;  /* Emerald Green */
+  --accent-hover: #047857;  /* Darker Emerald Green */
   --text-main: #334155;
   --text-muted: #64748b;
   --bg-light: #f8fafc;
@@ -105,7 +105,38 @@ ul {
 }
 
 /* =================================================================
-   1. Navigation Bar
+   Company Image & Container Styling Rules
+   ========================================================================== */
+/* Style for all company images */
+.company-image,
+.hero-image img,
+.features-banner img,
+.customer-banner img,
+.about-team-image img {
+  width: 100%;             /* Makes the image scale with the screen width */
+  max-width: 500px;        /* Prevents images from getting too massive on desktop */
+  height: auto;            /* Maintains original proportions so images don't stretch */
+  border-radius: 10px;     /* Rounds the corners nicely for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle soft shadow */
+  display: block;
+  margin: 20px auto;       /* Centers the image horizontally with spacing */
+}
+
+/* Container styling for neat layout blocks */
+.image-container,
+.hero-image,
+.features-banner,
+.customer-banner,
+.about-team-image {
+  text-align: center;
+  margin: 30px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* =================================================================
+1. Navigation Bar
    ========================================================================== */
 .navbar {
   position: sticky;
@@ -121,17 +152,27 @@ ul {
 }
 
 .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary-color);
   letter-spacing: -0.5px;
 }
 
+.nav-logo {
+  height: 36px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
 .nav-brand span {
   color: var(--accent-color);
 }
 
-.nav-links {
+.nav-links ul {
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -172,11 +213,11 @@ ul {
 }
 
 /* =================================================================
-   2. Hero Section
+2. Hero Section
    ========================================================================== */
 .hero {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--bg-light) 0%, #ecfdf5 100%);
+  background: linear-gradient(135deg, var(--bg-light) 0%, #eef2f6 100%);
   display: flex;
   align-items: center;
   text-align: center;
@@ -214,7 +255,7 @@ ul {
 }
 
 /* =================================================================
-   3. Features / Services Grid
+3. Features / Services Grid
    ========================================================================== */
 .features {
   padding: 6rem 0;
@@ -268,7 +309,7 @@ ul {
 }
 
 /* =================================================================
-   4. Pricing Section
+4. Pricing Section
    ========================================================================== */
 .pricing {
   padding: 6rem 0;
@@ -356,7 +397,7 @@ ul {
 }
 
 /* =================================================================
-   5. About Section
+5. About Section
    ========================================================================== */
 .about {
   padding: 6rem 0;
@@ -406,7 +447,7 @@ ul {
 }
 
 /* =================================================================
-   6. Footer
+6. Footer
    ========================================================================== */
 .footer {
   background-color: var(--primary-dark);
@@ -455,7 +496,7 @@ ul {
 }
 
 /* =================================================================
-   7. Responsive Media Queries
+7. Responsive Media Queries
    ========================================================================== */
 @media (max-width: 968px) {
   .about-content {
