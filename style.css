@@ -104,35 +104,24 @@ ul {
   color: var(--bg-white);
 }
 
-/* =================================================================
-   Company Image & Container Styling Rules
-   ========================================================================== */
 /* Style for all company images */
-.company-image,
-.hero-image img,
-.features-banner img,
-.customer-banner img,
-.about-team-image img {
-  width: 100%;             /* Makes the image scale with the screen width */
-  max-width: 500px;        /* Prevents images from getting too massive on desktop */
-  height: auto;            /* Maintains original proportions so images don't stretch */
-  border-radius: 10px;     /* Rounds the corners nicely for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle soft shadow */
-  display: block;
-  margin: 20px auto;       /* Centers the image horizontally with spacing */
+.company-image {
+    width: 100%;             /* Makes the image scale with the screen width */
+    max-width: 500px;        /* Prevents images from getting too massive on desktop */
+    height: auto;            /* Maintains original proportions so images don't stretch */
+    border-radius: 10px;     /* Rounds the corners nicely for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle soft shadow */
+    display: block;
+    margin: 20px auto;       /* Centers the image horizontally with spacing */
 }
 
 /* Container styling for neat layout blocks */
-.image-container,
-.hero-image,
-.features-banner,
-.customer-banner,
-.about-team-image {
-  text-align: center;
-  margin: 30px 0;
-  padding: 15px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+.image-container {
+    text-align: center;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
 /* =================================================================
@@ -162,10 +151,8 @@ ul {
 }
 
 .nav-logo {
-  height: 36px;
+  height: 3rem;
   width: auto;
-  border-radius: 6px;
-  object-fit: contain;
 }
 
 .nav-brand span {
